@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de datos de Alumnos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel= "icon" href= "https://ih1.redbubble.net/image.320669119.1479/raf,360x360,075,t,fafafa:ca443f4786.jpg">
+</head>
+<body>
+    <h1>Base de datos de Alumnos</h1>
+
+    <section id="alta-alumno">
+        <h2>Alta de Alumno</h2>
+        <form id="form-alta-alumno">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" required>
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" required>
+            <button type="submit">Agregar Alumno</button>
+        </form>
+    </section>
+
+    <section id="inscripcion">
+        <h2>Inscripción y Calificaciones</h2>
+        <form id="form-inscripcion">
+            <label for="nombre-buscar">Buscar Alumno:</label>
+            <input type="text" id="nombre-buscar" placeholder="Nombre del Alumno">
+            <button type="button" id="buscar-alumno">Buscar</button>
+        </form>
+        <div id="resultado-busqueda"></div>
+    </section>
+
+    <section id="grupos">
+        <h2>Gestión de Grupos</h2>
+        <form id="form-grupo">
+            <label for="grupo-nombre">Nombre del Grupo:</label>
+            <input type="text" id="grupo-nombre">
+            <button type="button" id="crear-grupo">Crear Grupo</button>
+        </form>
+        <form id="form-agregar-alumno">
+            <label for="grupo-seleccion">Seleccionar Grupo:</label>
+            <select id="grupo-seleccion"></select>
+            <label for="alumno-seleccion">Seleccionar Alumno:</label>
+            <select id="alumno-seleccion"></select>
+            <button type="button" id="agregar-alumno">Agregar Alumno al Grupo</button>
+        </form>
+    </section>
+
+    <section id="reportes">
+        <h2>Reportes</h2>
+        <button type="button" id="reportar-promedio-alumno">Promedio Alumno</button>
+        <button type="button" id="reportar-promedio-grupo">Promedio Grupo</button>
+        <button type="button" id="reportar-ordenado-calificaciones">Alumnos Ordenados por Calificación</button>
+        <div id="resultado-reportes"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
